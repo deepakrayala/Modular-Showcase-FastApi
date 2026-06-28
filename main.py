@@ -13,8 +13,8 @@ from fastapi.responses import JSONResponse
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-SPRING_BOOT_URL = "http://localhost:9090"
-NODE_BACKEND_URL = "http://localhost:5000"
+SPRING_BOOT_URL = "https://springbootbackend-cvgd.onrender.com"
+NODE_BACKEND_URL = "https://nodejs-1d5m.onrender.com"
 JWT_SECRET = "MySuperSecretKeyForJWTTokenGeneration2026SpringBootApp!@#$"
 JWT_ALGORITHM = "HS384"
 
