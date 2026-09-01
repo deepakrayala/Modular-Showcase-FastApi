@@ -350,7 +350,7 @@ async def create_review(request: Request):
         "POST",
         "/api/reviews",
         request,
-        auth_required=True,
+        auth_required=False,
         client=node_client,
     )
 
