@@ -191,7 +191,6 @@ async def get_users(request: Request):
         "GET",
         "/api/auth/users",
         request,
-        auth_required=True
     )
 
 @app.delete("/api/auth/users/{user_id}")
