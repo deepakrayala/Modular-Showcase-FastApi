@@ -191,6 +191,7 @@ async def get_users(request: Request):
         "GET",
         "/api/auth/users",
         request,
+        auth_required=False
     )
 
 @app.delete("/api/auth/users/{user_id}")
@@ -202,7 +203,7 @@ async def delete_user(
         "DELETE",
         f"/api/auth/users/{user_id}",
         request,
-        auth_required=True
+        auth_required=False
     )
 
 @app.get("/api/auth/health")
@@ -238,7 +239,7 @@ async def create_component(request: Request):
         "POST",
         "/api/components",
         request,
-        auth_required=True
+        auth_required=False
     )
 
 @app.put("/api/components/{component_id}")
@@ -250,7 +251,7 @@ async def update_component(
         "PUT",
         f"/api/components/{component_id}",
         request,
-        auth_required=True
+        auth_required=False
     )
 
 @app.delete("/api/components/{component_id}")
@@ -262,7 +263,7 @@ async def delete_component(
         "DELETE",
         f"/api/components/{component_id}",
         request,
-        auth_required=True
+        auth_required=False
     )
 
 @app.get("/api/mongo/components")
@@ -292,7 +293,7 @@ async def create_mongo_component(request: Request):
         "POST",
         "/api/mongo/components",
         request,
-        auth_required=True,
+        auth_required=False,
         client=node_client,
     )
 
@@ -305,7 +306,7 @@ async def update_mongo_component(
         "PUT",
         f"/api/mongo/components/{component_id}",
         request,
-        auth_required=True,
+        auth_required=False,
         client=node_client,
     )
 
@@ -318,7 +319,7 @@ async def delete_mongo_component(
         "DELETE",
         f"/api/mongo/components/{component_id}",
         request,
-        auth_required=True,
+        auth_required=False,
         client=node_client,
     )
 
@@ -328,6 +329,7 @@ async def get_reviews(request: Request):
         "GET",
         "/api/reviews",
         request,
+        auth_required=False,
         client=node_client,
     )
 
@@ -340,6 +342,7 @@ async def get_review(
         "GET",
         f"/api/reviews/{review_id}",
         request,
+        auth_required=False,
         client=node_client,
     )
 
@@ -362,7 +365,7 @@ async def update_review(
         "PUT",
         f"/api/reviews/{review_id}",
         request,
-        auth_required=True,
+        auth_required=False,
         client=node_client,
     )
 
@@ -375,7 +378,7 @@ async def delete_review(
         "DELETE",
         f"/api/reviews/{review_id}",
         request,
-        auth_required=True,
+        auth_required=False,
         client=node_client,
     )
 
